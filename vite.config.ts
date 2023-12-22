@@ -3,7 +3,7 @@
  * @Author: MADAO
  * @Date: 2023-12-22 10:31:17
  * @LastEditors: MADAO
- * @LastEditTime: 2023-12-22 10:54:21
+ * @LastEditTime: 2023-12-22 11:14:07
  */
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
@@ -18,4 +18,4 @@ export default defineConfig({
       input: getInputs(),
     }
   }
-})
+});

@@ -10,7 +10,7 @@ export const getInputs = () => {
       if (lstatSync(join(rootPath, file)).isDirectory()) {
         inputs[file] = resolve(__dirname, `../src/pages/${file}/index.html`);
       } else {
-        inputs['main'] = resolve(__dirname, `../src/pages/index.html`);
+        inputs['main'] = resolve(__dirname, '../src/pages/index.html');
       }
     }
 
