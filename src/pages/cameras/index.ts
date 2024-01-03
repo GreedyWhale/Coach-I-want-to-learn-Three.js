@@ -3,7 +3,7 @@
  * @Author: MADAO
  * @Date: 2024-01-02 15:13:49
  * @LastEditors: MADAO
- * @LastEditTime: 2024-01-03 16:51:16
+ * @LastEditTime: 2024-01-03 17:40:17
  */
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
@@ -14,7 +14,7 @@ const sizes = {
   width: 800,
   height: 600,
 };
-const aspectRatio = sizes.width / sizes.height;
+// const aspectRatio = sizes.width / sizes.height;
 
 const cursor = {
   x: 0,
