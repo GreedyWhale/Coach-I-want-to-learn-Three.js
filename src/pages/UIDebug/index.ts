@@ -3,7 +3,7 @@
  * @Author: MADAO
  * @Date: 2024-01-04 10:04:28
  * @LastEditors: MADAO
- * @LastEditTime: 2024-01-05 16:35:03
+ * @LastEditTime: 2024-01-05 17:00:12
  */
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
@@ -30,7 +30,7 @@ const attributes = {
     });
   },
 
-  color: '#F99417'
+  color: '#F99417',
 };
 
 const scene = new THREE.Scene();
@@ -95,6 +95,12 @@ gui.addColor(attributes, 'color')
 
 gui.add(attributes, 'spin')
   .name('让物体围绕 Y 轴旋转一周');
+
+const positionGroup = gui.addFolder('Position');
+positionGroup.add(triangles.position, 'x');
+positionGroup.add(triangles.position, 'y');
+positionGroup.add(triangles.position, 'z');
+
 
 const tick = () => {
   control.update();
