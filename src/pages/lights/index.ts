@@ -3,7 +3,7 @@
  * @Author: MADAO
  * @Date: 2024-01-12 17:05:11
  * @LastEditors: MADAO
- * @LastEditTime: 2024-01-13 14:24:58
+ * @LastEditTime: 2024-01-15 14:22:18
  */
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
@@ -139,7 +139,6 @@ const app: App = {
     const helper = new THREE.DirectionalLightHelper(light, 0.5);
     light.position.x = 3;
     light.position.y = 3;
-    light.rotation.z = -Math.PI * 0.25;
     app.scene.add(light, helper);
   },
   initHemisphereLight: () => {
