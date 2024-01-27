@@ -3,7 +3,7 @@
  * @Author: MADAO
  * @Date: 2024-01-23 10:52:50
  * @LastEditors: MADAO
- * @LastEditTime: 2024-01-27 16:03:27
+ * @LastEditTime: 2024-01-27 16:24:25
  */
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
@@ -290,7 +290,7 @@ const initListeners = () => {
 const initGUI = () => {
   gui.add(debugObject, 'createSphere').name('添加随机球体');
   gui.add(debugObject, 'createCube').name('添加随机立方体');
-  gui.add(debugObject, 'reset').name('重置');
+  gui.add(debugObject, 'reset').name('清除');
 };
 
 const tick = () => {
