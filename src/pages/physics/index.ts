@@ -3,7 +3,7 @@
  * @Author: MADAO
  * @Date: 2024-01-23 10:52:50
  * @LastEditors: MADAO
- * @LastEditTime: 2024-01-27 16:24:25
+ * @LastEditTime: 2024-01-29 11:27:14
  */
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
@@ -106,6 +106,8 @@ const meshMaterial = new THREE.MeshStandardMaterial({
   displacementScale: 0,
 });
 
+sphereGeometry.setAttribute('uv2', new THREE.BufferAttribute(sphereGeometry.attributes.uv.array, 2));
+cubeGeometry.setAttribute('uv2', new THREE.BufferAttribute(cubeGeometry.attributes.uv.array, 2));
 let previousTime = 0;
 
 let scene: THREE.Scene,
@@ -165,6 +167,9 @@ const initFloor = () => {
     }),
   );
 
+  planeMesh.geometry.setAttribute('uv2', new THREE.BufferAttribute(planeMesh.geometry.attributes.uv.array, 2));
+
+  console.log(planeMesh.geometry.attributes);
   planeMesh.rotation.set(-Math.PI / 2, 0, 0);
   planeMesh.position.y = 0;
   planeMesh.receiveShadow = true;
